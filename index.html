@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b3150">
+  <title>Nada & Mohamed — 23 October 2026</title>
+  <meta name="description" content="Wedding invitation and RSVP for Nada & Mohamed, 23 October 2026 at CELESTIA.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="invitation">
+    <div class="paper">
+      <section class="hero">
+        <p class="eyebrow">Together with their families</p>
+        <h1>Nada <span>&amp;</span> Mohamed</h1>
+        <div class="ornament">✦</div>
+        <p class="intro">joyfully invite you to celebrate their wedding</p>
+
+        <div class="details">
+          <div>
+            <span>FRIDAY</span>
+            <strong>23 OCTOBER</strong>
+            <span>2026</span>
+          </div>
+          <i></i>
+          <div>
+            <span>AT</span>
+            <strong>4:00 PM</strong>
+            <span>CELESTIA</span>
+          </div>
+        </div>
+
+        <p class="location">El Sheikh Zayed</p>
+        <p class="countdown-label">Counting down to our day</p>
+        <div class="countdown" aria-label="Countdown to the wedding">
+          <div><b id="days">—</b><span>days</span></div>
+          <div><b id="hours">—</b><span>hours</span></div>
+          <div><b id="minutes">—</b><span>minutes</span></div>
+          <div><b id="seconds">—</b><span>seconds</span></div>
+        </div>
+      </section>
+
+      <section class="rsvp" id="rsvp">
+        <p class="eyebrow">Kindly respond by 16 October 2026</p>
+        <h2>Will you join us?</h2>
+        <p class="subtext">We would be delighted to celebrate with you. Please let us know if you can make it.</p>
+
+        <!-- Replace the action URL with your Formspree / Google Forms endpoint when ready. -->
+        <form id="rsvpForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" placeholder="Your full name" required>
+          </label>
+
+          <fieldset>
+            <legend>Will you be able to join us?</legend>
+            <label class="choice">
+              <input type="radio" name="attendance" value="Yes, I will be there" required>
+              <span>Joyfully, yes! ♡</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="attendance" value="Sorry, I can't make it">
+              <span>Sadly, I can't make it</span>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Will you be bringing a plus-one? 💕</legend>
+            <label class="choice">
+              <input type="radio" name="plus_one" value="Yes">
+              <span>Yes</span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="plus_one" value="No">
+              <span>No</span>
+            </label>
+          </fieldset>
+
+          <button type="submit">Send my RSVP <span>→</span></button>
+          <p class="form-note">RSVPs close on 16 October 2026.</p>
+        </form>
+
+        <div class="success" id="success" hidden>
+          <div class="success-mark">✓</div>
+          <h3>Thank you!</h3>
+          <p>Your RSVP has been received. We can't wait to celebrate with you.</p>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-ornament">❧ ✦ ❧</div>
+        <p>Nada &amp; Mohamed</p>
+        <small>23 · 10 · 2026</small>
+      </footer>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

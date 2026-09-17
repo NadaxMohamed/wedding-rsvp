@@ -1,0 +1,342 @@
+* { box-sizing: border-box; }
+
+:root {
+  --teal: #0d5b62;
+  --deep-blue: #092f55;
+  --orange: #ed9344;
+  --cream: #f4ead9;
+  --white: #fffaf0;
+  --ink: #173d52;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: #0b3150;
+  color: var(--ink);
+  font-family: "Montserrat", sans-serif;
+}
+
+.invitation {
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.paper {
+  width: min(100%, 900px);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(244,234,217,.82), rgba(244,234,217,.92)),
+    url("wedding-art.jpg") center top / cover no-repeat;
+  box-shadow: 0 0 70px rgba(0,0,0,.28);
+}
+
+.paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.08), transparent 20%, transparent 80%, rgba(255,255,255,.08));
+}
+
+.hero, .rsvp, footer {
+  position: relative;
+  z-index: 1;
+  width: min(680px, calc(100% - 48px));
+  margin-inline: auto;
+  text-align: center;
+}
+
+.hero {
+  padding: clamp(120px, 18vw, 185px) 0 70px;
+  min-height: 830px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: var(--teal);
+  font-size: 11px;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+h1, h2, h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(64px, 11vw, 105px);
+  line-height: .82;
+  color: var(--deep-blue);
+  letter-spacing: -.035em;
+}
+
+h1 span {
+  color: var(--orange);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.ornament {
+  margin: 27px 0 13px;
+  color: var(--orange);
+  font-size: 22px;
+}
+
+.intro {
+  margin: 0 auto;
+  max-width: 420px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 23px;
+  line-height: 1.2;
+  font-style: italic;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin: 40px 0 14px;
+}
+
+.details > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 145px;
+}
+
+.details span {
+  font-size: 10px;
+  letter-spacing: .22em;
+  color: var(--teal);
+}
+
+.details strong {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  letter-spacing: .06em;
+  color: var(--deep-blue);
+}
+
+.details i {
+  height: 54px;
+  width: 1px;
+  background: rgba(9,47,85,.28);
+}
+
+.location {
+  margin: 4px 0 34px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+}
+
+.countdown-label {
+  margin: 0 0 11px;
+  font-size: 9px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.countdown div {
+  min-width: 74px;
+  padding: 9px 7px 8px;
+  border: 1px solid rgba(9,47,85,.2);
+  background: rgba(255,250,240,.48);
+}
+
+.countdown b {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--deep-blue);
+}
+
+.countdown span {
+  display: block;
+  margin-top: 2px;
+  font-size: 8px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.rsvp {
+  margin-top: 0;
+  padding: 55px 0 95px;
+  border-top: 1px solid rgba(9,47,85,.16);
+}
+
+.rsvp h2 {
+  margin: 0 0 8px;
+  font-size: clamp(50px, 8vw, 72px);
+  line-height: .9;
+  color: var(--deep-blue);
+}
+
+.subtext {
+  max-width: 460px;
+  margin: 0 auto 32px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+form {
+  width: min(460px, 100%);
+  margin: 0 auto;
+  text-align: left;
+}
+
+form > label, fieldset {
+  display: block;
+  margin: 0 0 22px;
+}
+
+label > span, legend {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 10px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--teal);
+}
+
+input[type="text"] {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(9,47,85,.35);
+  padding: 12px 4px;
+  outline: none;
+  background: transparent;
+  color: var(--ink);
+  font: 17px "Cormorant Garamond", serif;
+}
+
+input[type="text"]:focus { border-bottom-color: var(--orange); }
+
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+legend { padding: 0; }
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.choice input { accent-color: var(--teal); }
+
+button {
+  width: 100%;
+  margin-top: 5px;
+  border: 0;
+  padding: 15px 18px;
+  background: var(--deep-blue);
+  color: var(--white);
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform .2s ease, background .2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: var(--teal);
+}
+
+button span { font-size: 17px; margin-left: 8px; }
+
+.form-note {
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: .08em;
+  color: rgba(23,61,82,.65);
+}
+
+.success {
+  width: min(460px, 100%);
+  margin: 20px auto 0;
+  padding: 32px 20px;
+  text-align: center;
+  border: 1px solid rgba(9,47,85,.2);
+  background: rgba(255,250,240,.45);
+}
+
+.success-mark {
+  margin: 0 auto 12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--teal);
+  color: white;
+}
+
+.success h3 { margin: 0; font-size: 38px; }
+.success p { margin: 5px 0 0; font-family: "Cormorant Garamond", serif; font-size: 19px; }
+
+footer {
+  padding: 35px 0 55px;
+  border-top: 1px solid rgba(9,47,85,.16);
+}
+
+.footer-ornament { color: var(--orange); letter-spacing: .2em; }
+footer p {
+  margin: 9px 0 2px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+}
+footer small { font-size: 9px; letter-spacing: .22em; color: var(--teal); }
+
+@media (max-width: 600px) {
+  .paper {
+    background-position: center top;
+    background-size: auto 100%;
+  }
+  .hero {
+    min-height: 760px;
+    padding-top: 110px;
+  }
+  .details { gap: 12px; }
+  .details > div { min-width: 120px; }
+  .details strong { font-size: 22px; }
+  .countdown div { min-width: 66px; }
+  .hero, .rsvp, footer { width: calc(100% - 34px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  button { transition: none; }
+}
