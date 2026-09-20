@@ -4,64 +4,53 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b3150">
-  <title>Nada & Mohamed — 23 October 2026</title>
-  <meta name="description" content="Wedding invitation and RSVP for Nada & Mohamed, 23 October 2026 at CELESTIA.">
+  <title>Nada & Mohamed — RSVP</title>
+  <meta name="description" content="RSVP for Nada & Mohamed's wedding on 23 October 2026.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="invitation">
-    <div class="paper">
-      <section class="hero">
-        <p class="eyebrow">Together with their families</p>
-        <h1>Nada <span>&amp;</span> Mohamed</h1>
-        <div class="ornament">✦</div>
-        <p class="intro">joyfully invite you to celebrate their wedding</p>
+  <main class="page">
+    <div class="art-frame" aria-hidden="true"></div>
 
-        <div class="details">
-          <div><span>FRIDAY</span><strong>23 OCTOBER</strong><span>2026</span></div>
-          <i></i>
-          <div><span>AT</span><strong>4:00 PM</strong></div>
+    <section class="content" aria-label="Wedding RSVP">
+      <header class="intro">
+        <div class="ornament"><i></i><b>✦</b><i></i></div>
+        <p class="countdown-label">COUNTING DOWN TO OUR DAY</p>
+        <div class="countdown" aria-label="Countdown to 23 October 2026">
+          <div><strong id="days">—</strong><small>DAYS</small></div>
+          <div><strong id="hours">—</strong><small>HOURS</small></div>
+          <div><strong id="minutes">—</strong><small>MINUTES</small></div>
+          <div><strong id="seconds">—</strong><small>SECONDS</small></div>
         </div>
-        <p class="location">CELESTIA, EL SHEIKH ZAYED</p>
+        <div class="ornament lower"><i></i><b>✦</b><i></i></div>
+      </header>
 
-        <p class="countdown-label">Counting down to our day</p>
-        <div class="countdown" aria-label="Countdown to the wedding">
-          <div><b id="days">—</b><span>days</span></div>
-          <div><b id="hours">—</b><span>hours</span></div>
-          <div><b id="minutes">—</b><span>minutes</span></div>
-          <div><b id="seconds">—</b><span>seconds</span></div>
-        </div>
-      </section>
-
-      <section class="rsvp" id="rsvp">
-        <p class="eyebrow">Kindly respond by 16 October 2026</p>
+      <section class="rsvp-card" id="rsvp">
         <form id="rsvpForm" action="https://formspree.io/f/xwlpkjap" method="POST" novalidate>
-          <div class="progress" aria-hidden="true">
-            <span class="progress-dot active"></span><span class="progress-line"></span>
-            <span class="progress-dot"></span><span class="progress-line"></span>
-            <span class="progress-dot"></span>
+          <div class="progress" aria-label="RSVP progress">
+            <span class="dot active"></span><span class="line"></span>
+            <span class="dot"></span><span class="line"></span>
+            <span class="dot"></span><span class="line"></span>
+            <span class="dot"></span>
           </div>
 
           <div class="steps">
             <section class="step active" data-step="1" aria-hidden="false">
-              <p class="step-number">01</p>
-              <h3>What is your name?</h3>
-              <label class="input-wrap">
-                <span class="sr-only">Your name</span>
-                <input id="name" type="text" name="name" placeholder="Your full name" autocomplete="name" required>
-              </label>
-              <button class="next-btn" type="button" data-next>Continue <span>→</span></button>
+              <p class="step-number">01 / 04</p>
+              <h2>What is your name?</h2>
+              <input id="name" type="text" name="name" placeholder="Enter your name..." autocomplete="name" required>
+              <button type="button" class="primary" data-next>Continue <span>→</span></button>
             </section>
 
             <section class="step" data-step="2" aria-hidden="true">
-              <p class="step-number">02</p>
-              <h3>Will you be able to join us?</h3>
+              <p class="step-number">02 / 04</p>
+              <h2>Will you be able to join us?</h2>
               <div class="choices">
-                <label class="choice">
-                  <input type="radio" name="attendance" value="Yes, I will be there">
+                <label class="choice selected-blue">
+                  <input type="radio" name="attendance" value="Yes, I will be there" required>
                   <span>Joyfully, yes! ♡</span>
                 </label>
                 <label class="choice">
@@ -69,14 +58,15 @@
                   <span>Sadly, I can't make it</span>
                 </label>
               </div>
+              <button type="button" class="back" data-back>← Back</button>
             </section>
 
             <section class="step" data-step="3" aria-hidden="true">
-              <p class="step-number">03</p>
-              <h3>Will you be bringing a plus-one? 💕</h3>
+              <p class="step-number">03 / 04</p>
+              <h2>Will you be bringing a plus-one? 💕</h2>
               <div class="choices">
-                <label class="choice">
-                  <input type="radio" name="plus_one" value="Yes">
+                <label class="choice selected-blue">
+                  <input type="radio" name="plus_one" value="Yes" required>
                   <span>Yes</span>
                 </label>
                 <label class="choice">
@@ -84,37 +74,26 @@
                   <span>No</span>
                 </label>
               </div>
+              <button type="button" class="back" data-back>← Back</button>
             </section>
 
             <section class="step" data-step="4" aria-hidden="true">
-              <p class="step-number">✦</p>
-              <h3>Ready to send your RSVP?</h3>
-              <p class="review">Thank you, <strong id="reviewName"></strong>.<br>We have everything we need.</p>
-              <button class="submit-btn" type="submit">Send my RSVP <span>→</span></button>
-              <button class="back-btn" type="button" data-back>← Go back</button>
+              <p class="step-number">04 / 04</p>
+              <h2>Ready to send your RSVP?</h2>
+              <p class="review">Thank you, <strong id="reviewName"></strong>.</p>
+              <button type="submit" class="primary">Send my RSVP <span>→</span></button>
+              <button type="button" class="back" data-back>← Back</button>
             </section>
           </div>
-
-          <div class="step-nav">
-            <button class="back-btn" type="button" data-back>← Back</button>
-          </div>
-          <p class="form-note">RSVPs close on 16 October 2026.</p>
         </form>
 
         <div class="success" id="success" hidden>
-          <div class="success-mark">✓</div>
-          <h3>Thank you!</h3>
-          <p>Your RSVP has been received. We can't wait to celebrate with you.</p>
-          <div class="footer-ornament">❧ ✦ ❧</div>
+          <div class="success-mark">✦</div>
+          <h2>Thank you!</h2>
+          <p>Your RSVP has been received.<br>We can't wait to celebrate with you.</p>
         </div>
       </section>
-
-      <footer>
-        <div class="footer-ornament">❧ ✦ ❧</div>
-        <p>Nada &amp; Mohamed</p>
-        <small>23 · 10 · 2026</small>
-      </footer>
-    </div>
+    </section>
   </main>
   <script src="script.js"></script>
 </body>
