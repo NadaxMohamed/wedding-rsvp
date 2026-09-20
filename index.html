@@ -21,20 +21,12 @@
         <p class="intro">joyfully invite you to celebrate their wedding</p>
 
         <div class="details">
-          <div>
-            <span>FRIDAY</span>
-            <strong>23 OCTOBER</strong>
-            <span>2026</span>
-          </div>
+          <div><span>FRIDAY</span><strong>23 OCTOBER</strong><span>2026</span></div>
           <i></i>
-          <div>
-            <span>AT</span>
-            <strong>4:00 PM</strong>
-            <span>CELESTIA</span>
-          </div>
+          <div><span>AT</span><strong>4:00 PM</strong><span>CELESTIA</span></div>
         </div>
-
         <p class="location">El Sheikh Zayed</p>
+
         <p class="countdown-label">Counting down to our day</p>
         <div class="countdown" aria-label="Countdown to the wedding">
           <div><b id="days">—</b><span>days</span></div>
@@ -47,40 +39,68 @@
       <section class="rsvp" id="rsvp">
         <p class="eyebrow">Kindly respond by 16 October 2026</p>
         <h2>Will you join us?</h2>
-        <p class="subtext">We would be delighted to celebrate with you. Please let us know if you can make it.</p>
+        <p class="subtext">We would be delighted to celebrate with you.</p>
 
-        <!-- Replace the action URL with your Formspree / Google Forms endpoint when ready. -->
-        <form id="rsvpForm" action="https://formspree.io/f/xwlpkjap" method="POST">
-          <label>
-            <span>Your name</span>
-            <input type="text" name="name" placeholder="Your full name" required>
-          </label>
+        <form id="rsvpForm" action="https://formspree.io/f/xwlpkjap" method="POST" novalidate>
+          <div class="progress" aria-hidden="true">
+            <span class="progress-dot active"></span><span class="progress-line"></span>
+            <span class="progress-dot"></span><span class="progress-line"></span>
+            <span class="progress-dot"></span>
+          </div>
 
-          <fieldset>
-            <legend>Will you be able to join us?</legend>
-            <label class="choice">
-              <input type="radio" name="attendance" value="Yes, I will be there" required>
-              <span>Joyfully, yes! ♡</span>
-            </label>
-            <label class="choice">
-              <input type="radio" name="attendance" value="Sorry, I can't make it">
-              <span>Sadly, I can't make it</span>
-            </label>
-          </fieldset>
+          <div class="steps">
+            <section class="step active" data-step="1" aria-hidden="false">
+              <p class="step-number">01</p>
+              <h3>What is your name?</h3>
+              <label class="input-wrap">
+                <span class="sr-only">Your name</span>
+                <input id="name" type="text" name="name" placeholder="Your full name" autocomplete="name" required>
+              </label>
+              <button class="next-btn" type="button" data-next>Continue <span>→</span></button>
+            </section>
 
-          <fieldset>
-            <legend>Will you be bringing a plus-one? 💕</legend>
-            <label class="choice">
-              <input type="radio" name="plus_one" value="Yes">
-              <span>Yes</span>
-            </label>
-            <label class="choice">
-              <input type="radio" name="plus_one" value="No">
-              <span>No</span>
-            </label>
-          </fieldset>
+            <section class="step" data-step="2" aria-hidden="true">
+              <p class="step-number">02</p>
+              <h3>Will you be able to join us?</h3>
+              <div class="choices">
+                <label class="choice">
+                  <input type="radio" name="attendance" value="Yes, I will be there">
+                  <span>Joyfully, yes! ♡</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="attendance" value="Sorry, I can't make it">
+                  <span>Sadly, I can't make it</span>
+                </label>
+              </div>
+            </section>
 
-          <button type="submit">Send my RSVP <span>→</span></button>
+            <section class="step" data-step="3" aria-hidden="true">
+              <p class="step-number">03</p>
+              <h3>Will you be bringing a plus-one? 💕</h3>
+              <div class="choices">
+                <label class="choice">
+                  <input type="radio" name="plus_one" value="Yes">
+                  <span>Yes</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="plus_one" value="No">
+                  <span>No</span>
+                </label>
+              </div>
+            </section>
+
+            <section class="step" data-step="4" aria-hidden="true">
+              <p class="step-number">✦</p>
+              <h3>Ready to send your RSVP?</h3>
+              <p class="review">Thank you, <strong id="reviewName"></strong>.<br>We have everything we need.</p>
+              <button class="submit-btn" type="submit">Send my RSVP <span>→</span></button>
+              <button class="back-btn" type="button" data-back>← Go back</button>
+            </section>
+          </div>
+
+          <div class="step-nav">
+            <button class="back-btn" type="button" data-back>← Back</button>
+          </div>
           <p class="form-note">RSVPs close on 16 October 2026.</p>
         </form>
 
@@ -88,6 +108,7 @@
           <div class="success-mark">✓</div>
           <h3>Thank you!</h3>
           <p>Your RSVP has been received. We can't wait to celebrate with you.</p>
+          <div class="footer-ornament">❧ ✦ ❧</div>
         </div>
       </section>
 
